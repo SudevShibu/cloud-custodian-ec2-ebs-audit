@@ -1,0 +1,77 @@
+{
+  "policy": {
+    "name": "stop-unused-ec2-instances",
+    "resource": "ec2",
+    "filters": [
+      {
+        "type": "metrics",
+        "name": "CPUUtilization",
+        "period": 7200,
+        "days": 7,
+        "op": "lt",
+        "value": 5
+      }
+    ],
+    "actions": [
+      "stop"
+    ]
+  },
+  "version": "0.9.41",
+  "execution": {
+    "id": "7474f614-7351-4bbd-8f0a-6a6f0187f912",
+    "start": 1731353327.1624467,
+    "end_time": 1731353330.148538,
+    "duration": 2.986091375350952
+  },
+  "config": {
+    "region": "us-east-1",
+    "regions": [
+      "us-east-1"
+    ],
+    "cache": "~/.cache/cloud-custodian.cache",
+    "profile": null,
+    "account_id": "423623824394",
+    "assume_role": null,
+    "session_policy": null,
+    "external_id": null,
+    "log_group": null,
+    "tracer": null,
+    "metrics_enabled": null,
+    "metrics": null,
+    "output_dir": ".",
+    "cache_period": 15,
+    "dryrun": false,
+    "authorization_file": null,
+    "subparser": "run",
+    "config": null,
+    "configs": [
+      "ec2-policy.yml"
+    ],
+    "policy_filters": [],
+    "resource_types": [],
+    "verbose": null,
+    "quiet": null,
+    "debug": false,
+    "skip_validation": false,
+    "command": "c7n.commands.run",
+    "vars": null
+  },
+  "sys-stats": {},
+  "api-stats": {
+    "ec2.DescribeInstances": 1
+  },
+  "metrics": [
+    {
+      "MetricName": "ResourceCount",
+      "Timestamp": "2024-11-12T00:58:50.147729",
+      "Value": 0,
+      "Unit": "Count"
+    },
+    {
+      "MetricName": "ResourceTime",
+      "Timestamp": "2024-11-12T00:58:50.147745",
+      "Value": 2.9747912883758545,
+      "Unit": "Seconds"
+    }
+  ]
+}

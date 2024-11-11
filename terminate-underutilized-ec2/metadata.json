@@ -1,0 +1,75 @@
+{
+  "policy": {
+    "name": "terminate-underutilized-ec2",
+    "resource": "ec2",
+    "filters": [
+      {
+        "type": "metrics",
+        "name": "CPUUtilization",
+        "period": 86400,
+        "days": 30,
+        "op": "lt",
+        "value": 5
+      }
+    ],
+    "actions": [
+      "terminate"
+    ]
+  },
+  "version": "0.9.41",
+  "execution": {
+    "id": "95a70ff7-f2fe-4c79-9e08-5bb9616b5f83",
+    "start": 1731353331.621612,
+    "end_time": 1731353331.6244085,
+    "duration": 0.0027964115142822266
+  },
+  "config": {
+    "region": "us-east-1",
+    "regions": [
+      "us-east-1"
+    ],
+    "cache": "~/.cache/cloud-custodian.cache",
+    "profile": null,
+    "account_id": "423623824394",
+    "assume_role": null,
+    "session_policy": null,
+    "external_id": null,
+    "log_group": null,
+    "tracer": null,
+    "metrics_enabled": null,
+    "metrics": null,
+    "output_dir": ".",
+    "cache_period": 15,
+    "dryrun": false,
+    "authorization_file": null,
+    "subparser": "run",
+    "config": null,
+    "configs": [
+      "ec2-policy.yml"
+    ],
+    "policy_filters": [],
+    "resource_types": [],
+    "verbose": null,
+    "quiet": null,
+    "debug": false,
+    "skip_validation": false,
+    "command": "c7n.commands.run",
+    "vars": null
+  },
+  "sys-stats": {},
+  "api-stats": {},
+  "metrics": [
+    {
+      "MetricName": "ResourceCount",
+      "Timestamp": "2024-11-12T00:58:51.623684",
+      "Value": 0,
+      "Unit": "Count"
+    },
+    {
+      "MetricName": "ResourceTime",
+      "Timestamp": "2024-11-12T00:58:51.623691",
+      "Value": 0.001119852066040039,
+      "Unit": "Seconds"
+    }
+  ]
+}

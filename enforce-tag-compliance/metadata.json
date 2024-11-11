@@ -1,0 +1,74 @@
+{
+  "policy": {
+    "name": "enforce-tag-compliance",
+    "resource": "ec2",
+    "filters": [
+      {
+        "tag:Environment": "absent"
+      }
+    ],
+    "actions": [
+      {
+        "type": "tag",
+        "key": "Environment",
+        "value": "Default"
+      }
+    ]
+  },
+  "version": "0.9.41",
+  "execution": {
+    "id": "f41409b0-5b14-4039-a86d-5fb59d3fbd24",
+    "start": 1731353331.6152744,
+    "end_time": 1731353331.619858,
+    "duration": 0.004583597183227539
+  },
+  "config": {
+    "region": "us-east-1",
+    "regions": [
+      "us-east-1"
+    ],
+    "cache": "~/.cache/cloud-custodian.cache",
+    "profile": null,
+    "account_id": "423623824394",
+    "assume_role": null,
+    "session_policy": null,
+    "external_id": null,
+    "log_group": null,
+    "tracer": null,
+    "metrics_enabled": null,
+    "metrics": null,
+    "output_dir": ".",
+    "cache_period": 15,
+    "dryrun": false,
+    "authorization_file": null,
+    "subparser": "run",
+    "config": null,
+    "configs": [
+      "ec2-policy.yml"
+    ],
+    "policy_filters": [],
+    "resource_types": [],
+    "verbose": null,
+    "quiet": null,
+    "debug": false,
+    "skip_validation": false,
+    "command": "c7n.commands.run",
+    "vars": null
+  },
+  "sys-stats": {},
+  "api-stats": {},
+  "metrics": [
+    {
+      "MetricName": "ResourceCount",
+      "Timestamp": "2024-11-12T00:58:51.619078",
+      "Value": 0,
+      "Unit": "Count"
+    },
+    {
+      "MetricName": "ResourceTime",
+      "Timestamp": "2024-11-12T00:58:51.619087",
+      "Value": 0.0027837753295898438,
+      "Unit": "Seconds"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+policies:
+  - name: stop-unused-ec2-instances
+    resource: ec2
+    filters:
+      - type: metrics
+        name: CPUUtilization
+        period: 7200
+        days: 7
+        op: lt
+        value: 5
+    actions:
+      - stop
+
+  - name: delete-unencrypted-ebs
+    resource: ebs
+    filters:
+      - Encrypted: false
+    actions:
+      - delete
+
+  - name: enforce-tag-compliance
+    resource: ec2
+    filters:
+      - "tag:Environment": absent
+    actions:
+      - type: tag
+        key: Environment
+        value: Default
+
+  - name: terminate-underutilized-ec2
+    resource: ec2
+    filters:
+      - type: metrics
+        name: CPUUtilization
+        period: 86400
+        days: 30
+        op: lt
+        value: 5
+    actions:
+      - terminate

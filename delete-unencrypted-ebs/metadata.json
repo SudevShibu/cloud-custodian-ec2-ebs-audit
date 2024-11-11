@@ -1,0 +1,72 @@
+{
+  "policy": {
+    "name": "delete-unencrypted-ebs",
+    "resource": "ebs",
+    "filters": [
+      {
+        "Encrypted": false
+      }
+    ],
+    "actions": [
+      "delete"
+    ]
+  },
+  "version": "0.9.41",
+  "execution": {
+    "id": "4ebfd783-7864-41a7-b533-6b7084f239e3",
+    "start": 1731353330.150319,
+    "end_time": 1731353331.613422,
+    "duration": 1.4631028175354004
+  },
+  "config": {
+    "region": "us-east-1",
+    "regions": [
+      "us-east-1"
+    ],
+    "cache": "~/.cache/cloud-custodian.cache",
+    "profile": null,
+    "account_id": "423623824394",
+    "assume_role": null,
+    "session_policy": null,
+    "external_id": null,
+    "log_group": null,
+    "tracer": null,
+    "metrics_enabled": null,
+    "metrics": null,
+    "output_dir": ".",
+    "cache_period": 15,
+    "dryrun": false,
+    "authorization_file": null,
+    "subparser": "run",
+    "config": null,
+    "configs": [
+      "ec2-policy.yml"
+    ],
+    "policy_filters": [],
+    "resource_types": [],
+    "verbose": null,
+    "quiet": null,
+    "debug": false,
+    "skip_validation": false,
+    "command": "c7n.commands.run",
+    "vars": null
+  },
+  "sys-stats": {},
+  "api-stats": {
+    "ec2.DescribeVolumes": 1
+  },
+  "metrics": [
+    {
+      "MetricName": "ResourceCount",
+      "Timestamp": "2024-11-12T00:58:51.612506",
+      "Value": 0,
+      "Unit": "Count"
+    },
+    {
+      "MetricName": "ResourceTime",
+      "Timestamp": "2024-11-12T00:58:51.612515",
+      "Value": 1.461106300354004,
+      "Unit": "Seconds"
+    }
+  ]
+}
