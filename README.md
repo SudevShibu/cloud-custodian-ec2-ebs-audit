@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Cloud Custodian (c7n)
 =================
 
@@ -296,3 +297,6 @@ This project adheres to the [CNCF Code of Conduct](https://github.com/cncf/found
 
 By participating, you are expected to honor this code.
 
+=======
+# cloud-custodian-ec2-ebs-audit
+>>>>>>> d02734c33ca8e687d8e8a37131b6e1cd89dd7d90
