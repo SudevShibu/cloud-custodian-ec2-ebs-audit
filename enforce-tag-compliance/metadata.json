@@ -17,10 +17,10 @@
   },
   "version": "0.9.41",
   "execution": {
-    "id": "f41409b0-5b14-4039-a86d-5fb59d3fbd24",
-    "start": 1731353331.6152744,
-    "end_time": 1731353331.619858,
-    "duration": 0.004583597183227539
+    "id": "ab389d8a-0cba-4068-bc8b-c9419c35e582",
+    "start": 1731400211.9127283,
+    "end_time": 1731400211.9173172,
+    "duration": 0.0045888423919677734
   },
   "config": {
     "region": "us-east-1",
@@ -60,14 +60,14 @@
   "metrics": [
     {
       "MetricName": "ResourceCount",
-      "Timestamp": "2024-11-12T00:58:51.619078",
+      "Timestamp": "2024-11-12T14:00:11.916470",
       "Value": 0,
       "Unit": "Count"
     },
     {
       "MetricName": "ResourceTime",
-      "Timestamp": "2024-11-12T00:58:51.619087",
-      "Value": 0.0027837753295898438,
+      "Timestamp": "2024-11-12T14:00:11.916481",
+      "Value": 0.002513885498046875,
       "Unit": "Seconds"
     }
   ]
